@@ -8,8 +8,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root{
+    /* Colors */
+    --body-color: #2d2d30;
+    --background-effect: linear-gradient(45deg, #c32f34 0%, #f2902f 100%);
+    --background-effect-text: #ffffff;
+    --background-containers: #ffffff;
+    --icons: #878787;
+    --hover: #f2f2f2;
+
+    --week-names: #333;
+    --inactive: #aaa;
+}
+
 body{
-    background: #2d2d30;
+    background: var(--body-color);
 }
 
 body::-webkit-scrollbar {
@@ -25,7 +38,7 @@ body::-webkit-scrollbar {
 .select-menu .select-btn{
     display: flex;
     height: auto;
-    background: #fff;
+    background: var(--background-containers);
     padding: 10px;
     font-size: 18px;
     font-weight: 100;
@@ -40,9 +53,10 @@ body::-webkit-scrollbar {
 .select-btn i{
     font-size: 25px;
     transition: 0.3s;
-    color: #bababa;
+    color: var(--icons);
 }
 
+/* ===== can be deleted ===== */
 .select-menu.active .select-btn{
     outline: 3px solid #8fc7f8;
 }
@@ -56,7 +70,7 @@ body::-webkit-scrollbar {
     padding: 20px;
     margin-top: 20px;
     border-radius: 12px;
-    background: #fff;
+    background: var(--background-containers);
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
     display: none;
 }
@@ -77,7 +91,7 @@ body::-webkit-scrollbar {
 
 .calendarContainer{
     width: 450px;
-    background: #fff;
+    background: var(--background-containers);
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
@@ -98,7 +112,7 @@ body::-webkit-scrollbar {
     width: 38px;
     margin: 0 1px;
     cursor: pointer;
-    color: #878787;
+    color: var(--icons);
     text-align: center;
     line-height: 38px;
     font-size: 1.9rem;
@@ -111,7 +125,7 @@ body::-webkit-scrollbar {
 }
 
 .calendarHeader .icons span:hover{
-    background: #f2f2f2;
+    background: var(--hover);
 }
 
 .calendarHeader .current-date{
@@ -131,7 +145,7 @@ body::-webkit-scrollbar {
 }
 
 .calendar li{
-    color: #333;
+    color: var(--week-names);
     width: calc(100% / 7);
     font-size: 1.07rem;
 }
@@ -151,11 +165,11 @@ body::-webkit-scrollbar {
 .days li.inactive{
     background-color: transparent;
     pointer-events: none;
-    color: #aaa;
+    color: var(--inactive);
 }
 
 .days li.active{
-    color: #fff;
+    color: var(--background-effect-text);
 }
 
 
@@ -172,9 +186,9 @@ body::-webkit-scrollbar {
 }
 
 .days li.active::before{
-    background: linear-gradient(45deg, #c32f34 0%, #f2902f 100%);
+    background: var(--background-effect);
 }
 
 .days li:not(.active):hover::before{
-    background: #f2f2f2;
+    background: var(--hover);
 }
