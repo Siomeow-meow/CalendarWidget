@@ -1,7 +1,7 @@
 Welcome to the Calendar Widget project! This widget is designed to provide a simple and user-friendly calendar display for your web application. It's a handy tool for displaying dates and navigating through months. While it serves its purpose well, please be aware of a known issue, which we plan to fix in a future update.
 
 Bug Description
-Issue: When switching to the next or previous months and then returning to the month of your last clicked day, the background effect (or any other visual effect) disappears.
+Issue: When switching to the next or previous months and then returning to the month of your last clicked day, only the background effect disappears.
 Status: This issue is a known bug, and I am actively working on a solution. I appreciate your patience, and I aim to resolve it in the upcoming releases.
 
 Please note that the Calendar Widget is currently not responsive. It may not display optimally on all screen sizes or devices. We are aware of this limitation, and improving responsiveness is on our roadmap for future updates.
