@@ -1,0 +1,180 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #2d2d30;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.select-menu{
+    width: 450px;
+    margin: 50px auto;
+}
+
+.select-menu .select-btn{
+    display: flex;
+    height: auto;
+    background: #fff;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 12px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-around;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    outline: 3px solid #e3e3e3;
+}
+
+.select-btn i{
+    font-size: 25px;
+    transition: 0.3s;
+    color: #bababa;
+}
+
+.select-menu.active .select-btn{
+    outline: 3px solid #8fc7f8;
+}
+
+.select-menu.active .select-btn .bx-chevron-down{
+    transform: rotate(-180deg);
+}
+
+.select-menu .calendarContainer{
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.select-menu.active .calendarContainer{
+    display: block;
+}
+
+.labels-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.label:first-child {
+    font-weight: bold;
+}
+
+.calendarContainer{
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.calendarContainer .calendarHeader{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+.calendarHeader .icons{
+    display: flex;
+}
+
+.calendarHeader .icons span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.icons span:last-child{
+    margin-right: -10px;
+}
+
+.calendarHeader .icons span:hover{
+    background: #f2f2f2;
+}
+
+.calendarHeader .current-date{
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.calendar{
+    padding: 20px;
+}
+
+.calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.calendar li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+
+.calendar .weeks li{
+    font-weight: 500;
+    cursor: default;
+}
+
+.calendar .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.days li.inactive{
+    background-color: transparent;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.days li.active{
+    color: #fff;
+}
+
+
+.days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before{
+    background: linear-gradient(45deg, #c32f34 0%, #f2902f 100%);
+}
+
+.days li:not(.active):hover::before{
+    background: #f2f2f2;
+}
