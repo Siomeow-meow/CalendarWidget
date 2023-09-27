@@ -3,11 +3,10 @@ Welcome to the Calendar Widget project! This widget is designed to provide a sim
 
 Bug Description
 Issue: When switching to the next or previous months and then returning to the month of your last clicked day, the background effect (or any other visual effect) disappears.
-Status: This issue is a known bug, and we are actively working on a solution. We appreciate your patience, and we aim to resolve it in the upcoming releases.
+Status: This issue is a known bug, and I am actively working on a solution. I appreciate your patience, and I aim to resolve it in the upcoming releases.
 
 
-License
 This Calendar Widget is released under the MIT License.
 
 
-Thank you for using the Calendar Widget! We appreciate your support and hope you find it useful despite the known issue. Stay tuned for updates and improvements!
+Thank you for using the Calendar Widget! I appreciate your support and hope you find it useful despite the known issue. Stay tuned for updates and improvements!
